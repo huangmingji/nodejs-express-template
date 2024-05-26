@@ -5,9 +5,9 @@ const { success, error, unauthorized } = require('../utils/restfulapi/json-resul
 const User = require('../models/user');
 
 /* GET users listing. */
-router.get('/users ', function (req, res, next) {
+router.get('/users', function (req, res, next) {
     // throw new HttpException(400, '服务器内部错误');
-    json(res, { 'id': 1, 'name': 'zhangsan' });
+    success(res, { 'id': 1, 'name': 'zhangsan' });
 });
 
 router.post('/users', async function (req, res, next) {
